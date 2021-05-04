@@ -7,6 +7,11 @@
     <!-- meta 정보 제출하는 회사에 맞게 수정 -->
     <meta name="name" content="ThinkerRing" />
     <meta name="description" content="FE egineer ThinkerRing" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" href="imgs/TK-favicon.png" type="image/png" />
     <link
       rel="stylesheet"
@@ -95,15 +100,22 @@
       </div>
     </section>
     <!-- abount me가 더 맞는거 같음. 나중에 고쳐야 함. -->
-    <footer class="account">
-      <h1 class="account__title">My Links</h1>
-      <h3 class="account__sub-title">thinkerring2020@gmail.com</h3>
-      <div class="account__links">
-        <a href="https://github.com/sibiwol/TIL" target="_blank">
-          <i class="fab fa-github"></i>
+    <footer id="footer">
+      <h1 class="footer__title">Read more</h1>
+      <div class="accounts">
+        <a
+          href="https://github.com/sibiwol/TIL"
+          target="_blank"
+          class="account__link github"
+        >
+          <img src="/imgs/github-logo.png" alt="" class="account__img" />
         </a>
-        <a href="https://velog.io/@sibiwol12" target="_blank">
-          <img src="/imgs/velog-img.jpg" alt="velog-img" />
+        <a
+          href="https://velog.io/@sibiwol12"
+          target="_blank"
+          class="account__link velog"
+        >
+          <span>v</span>
         </a>
       </div>
     </footer>
