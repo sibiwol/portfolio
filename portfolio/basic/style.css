@@ -116,3 +116,16 @@ ul {
   border-radius: 8px;
   transition: all 200ms linear;
 }
+
+/* Home */
+#home {
+  padding: 40px;
+  text-align: center;
+}
+
+.home__logo-img {
+  width: 250px;
+  height: 250px;
+  border: 5px solid var(--color-mint);
+  border-radius: 50%;
+}
