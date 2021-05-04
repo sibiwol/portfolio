@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "BMDOHYEON";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Global */
+:root {
+  /* color */
+  --color-mint: #2ac1bc;
+  --color-white: white;
+  /* font-family */
+  --family-title: "BMDOHYEON";
+  /* Font-size */
+  --font-large: 48px;
+  --font-medicum: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+  /* font-weight: ; */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+  /* Size */
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1 {
+  font-family: "BMDOHYEON";
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  margin: 16px 0;
+}
+
+h2 {
+  font-family: "BMDOHYEON";
+  font-size: var(--font-medicum);
+  font-weight: var(--weight-bold);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  margin: 8px 0;
+}
+
+h3 {
+  font-family: "BMDOHYEON";
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  margin: 8px 0;
+}
+
+p {
+  font-family: "BMDOHYEON";
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  margin: 4px 0;
+}
+body {
+  background-color: var(--color-mint);
+}
