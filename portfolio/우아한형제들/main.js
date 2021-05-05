@@ -49,7 +49,7 @@ new fullpage("#fullpage", {
   //디자인
   controlArrows: true,
   verticalCentered: true,
-  // sectionsColor: ["#ccc", "#fff"],
+  sectionsColor: ["#2ac1bc", "#2ac1bc", "#2ac1bc", "#2ac1bc", "#2ac1bc"],
   paddingTop: "3em",
   paddingBottom: "10px",
   fixedElements: "#header, .footer",
