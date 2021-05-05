@@ -1,6 +1,8 @@
 "use strict";
 
-const navbar = document.querySelector("#navbar");
+let circle = document.querySelector("circle");
+let radius = circle.r.baseVal.value;
+let circumference = radius * 2 * Math.PI;
 
 new fullpage("#fullpage", {
   //이동
@@ -26,7 +28,7 @@ new fullpage("#fullpage", {
   loopBottom: false,
   loopTop: false,
   loopHorizontal: true,
-  continuousVertical: false,
+  continuousVertical: true,
   continuousHorizontal: false,
   scrollHorizontally: false,
   interlockedSlides: false,
@@ -71,9 +73,16 @@ new fullpage("#fullpage", {
 
   //사건(이벤트)
   onLeave: function (origin, destination, direction) {
-    if (destination.anchor != "firstPage" && direction === "down")
+    console.log(destination.index);
+
+    if (destination.index === 2) {
+      console.log(circle.dataset.value);
+      setProgress(circle.dataset.value);
+    }
+
+    if (destination.anchor != "firstPage")
       return (navbar.style.visibility = "visible");
-    if (destination.anchor === "firstPage" && direction === "up")
+    if (destination.anchor === "firstPage")
       return (navbar.style.visibility = "hidden");
   },
   afterLoad: function (origin, destination, direction) {},
@@ -84,3 +93,11 @@ new fullpage("#fullpage", {
   afterSlideLoad: function (section, origin, destination, direction) {},
   onSlideLeave: function (section, origin, destination, direction) {},
 });
+
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+circle.style.strokeDashoffset = `${circumference}`;
+
+function setProgress(percent) {
+  const offset = circumference - (percent / 100) * circumference;
+  circle.style.strokeDashoffset = offset;
+}

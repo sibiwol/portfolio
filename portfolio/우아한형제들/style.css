@@ -13,6 +13,7 @@
   --color-mint: #2ac1bc;
   --color-dark-mint: #1e8a87;
   --color-white: white;
+  --border-color: salmon;
   /* font-family */
   --family-title: "BMDOHYEON";
   /* Font-size */
@@ -89,7 +90,7 @@ ul {
   width: 100%;
   top: 0;
   z-index: 1;
-  padding-top: 18px;
+  padding: 24px 12px 0 12px;
   visibility: hidden;
   display: flex;
   justify-content: space-between;
@@ -101,17 +102,20 @@ ul {
 .navbar__logo {
   display: flex;
   align-items: flex-end;
+  padding: 8px 12px;
 }
 
 .navbar__logo img {
-  width: 96px;
+  width: 76px;
+  border-radius: 50%;
+  /* padding-bottom: 12px; */
 }
 .navbar__logo p {
   display: block;
   margin: 0;
-  padding: 8px 12px;
 
   font-size: var(--font-large);
+  padding-left: 12px;
 }
 
 .navbar__menu {
@@ -151,46 +155,64 @@ ul {
   justify-content: space-evenly;
   align-items: center;
   color: var(--color-white);
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .about__avatar {
   background-image: url(/imgs/hyerim-img.jpg);
   background-repeat: no-repeat;
-  background-position: 50% 40%;
-  background-size: cover;
+  background-position: 50% 30%;
+  background-size: 110%;
 
   margin: 0;
   width: 400px;
   height: 400px;
   border-radius: 50%;
   border: var(--border-bold) solid var(--color-white);
-  /* background-size: 150%; */
 }
 
 .about__descrition {
   vertical-align: bottom;
 }
+
 /* Skills */
 #skills {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .skills-item {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
+  /* background-color: salmon; */
 
-  text-align: center;
-  border-radius: 50%;
-  border: var(--border-bold) solid var(--color-mint);
+  /* position: absolute;
+  top: 100px;
+  left: 100px; */
+  /* border-radius: 50%; */
+  /* border: var(--border-bold) solid white; */
 }
+
+.skills-item__circle {
+  position: relative;
+  transition: 0.35s stroke-dashoffset;
+  /* // axis compensation */
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
 .skills-item__name {
+  position: absolute;
   text-align: center;
   line-height: 300px;
+  color: var(--color-white);
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
 }
-.skills-item__bar {
+/* .skills-item__bar {
   width: 100%;
   height: 5px;
   background-color: var(--color-mint);
@@ -198,30 +220,30 @@ ul {
 .skills-item__value {
   height: 5px;
   background-color: var(--color-dark-mint);
-}
+} */
 
 /* Project */
-.project__items {
+#project {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+.project__link {
+  width: 400px;
+  height: 400px;
+}
 
-.project-item {
-  border-collapse: separate;
+.project__img {
+  background-image: url(/imgs/shopping-list.png);
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  background-size: -50%;
+  background-color: var(--color-mint);
+  margin: 0;
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background-color: var(--color-mint);
-}
-.project-item__img {
-  /* background-image: url(/imgs/shopping-list.png);
-  background-repeat: no-repeat;
-  background-size: cover; */
-
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  border: var(--border-bold) solid var(--color-white);
 }
 
 /* Acount */

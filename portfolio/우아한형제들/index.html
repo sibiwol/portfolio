@@ -27,21 +27,18 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="/plugin/fullpage.min.css" />
-    
+
     <script type="text/javascript" src="/plugin/fullpage.min.js"></script>
   </head>
   <body>
     <nav id="navbar">
       <div class="navbar__logo">
-        <!-- <img
-          src="/imgs/TK-favicon.png"
-          alt="TK-logo"
-        /> -->
+        <img src="/imgs/TK-logo.png" alt="TK-logo" />
         <!-- <a>태그 이용할지 말지 생각해 -->
         <p>ThinkerRing</p>
       </div>
       <ul class="navbar__menu">
-        <li class="menu__item">Home</li>
+        <li class="menu__item home">Home</li>
         <li class="menu__item">About</li>
         <li class="menu__item">Skills</li>
         <li class="menu__item">Project</li>
@@ -66,45 +63,88 @@
             <h2>인터렉티브한 디자인에 관심이 많습니다.</h2>
           </div>
         </div>
-        
       </div>
       <div class="section">
         <div id="skills">
-            <div class="skills-item">
-              <span class="skills-item__name">HTML</span>
-              <div class="skills-item__bar">
-                <div class="skills-item__value" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skills-item">
+          <svg class="skills-item">
+            <circle
+              class="skills-item__circle"
+              data-value="80"
+              stroke="white"
+              stroke-width="10"
+              fill="salmon"
+              r="105"
+              cx="50%"
+              cy="50%"
+            />
+            <span class="skills-item__name">HTML</span>
+            <svg class="skills-item">
+              <circle
+                class="skills-item__circle"
+                data-value="70"
+                stroke="white"
+                stroke-width="10"
+                fill="salmon"
+                r="105"
+                cx="50%"
+                cy="50%"
+              />
               <span class="skills-item__name">CSS</span>
-              <div class="skills-item__bar">
-                <div class="skills-item__value" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skills-item">
-              <span class="skills-item__name">JavsScript</span>
-              <div class="skills-item__bar">
-                <div class="skills-item__value" style="width: 90%"></div>
-              </div>
-            </div>
+              <svg class="skills-item">
+                <circle
+                  class="skills-item__circle"
+                  data-value="60"
+                  stroke="white"
+                  stroke-width="10"
+                  fill="salmon"
+                  r="105"
+                  cx="50%"
+                  cy="50%"
+                />
+                <span class="skills-item__name">JS</span>
+          </svg>
         </div>
-        
       </div>
-      <div id="project" class="section">
-        <h1 class="project__title">PROJECT</h1>
-        <div class="project__items">
-          <a href="#" target="blank" class="project-item">
-            <img src="/imgs/shopping-list.png" alt="" class="project-item__img" />
+      <div class="section">
+        <div id="project">
+          <!-- <a> tag 이용할 수 있는 방법-->
+          <a href="#" target="blank" class="project__link" >
+            <div class="project__img">
+              <!-- <img
+              src="/imgs/shopping-list.png"
+              alt=""
+              class="project-item__img"
+            /> -->
             <!-- <div class="project-item__img" /> -->
-            <div class="project-item__description">
-              <h3>타이틀</h3>
-              <span>설명</span>
+              <div class="project__description">
+                <h3>타이틀</h3>
+                <span>설명</span>
+              </div>
             </div>
           </a>
         </div>
       </div>
-
-      <script src="main.js"></script>
+      <div class="section">
+        <div id="footer">
+          <div class="accounts">
+            <a
+              href="https://github.com/sibiwol/TIL"
+              target="_blank"
+              class="account__link github"
+            >
+              <img src="/imgs/github-logo.png" alt="" class="account__img" />
+            </a>
+            <a
+              href="https://velog.io/@sibiwol12"
+              target="_blank"
+              class="account__link velog"
+            >
+              <span>v</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>
