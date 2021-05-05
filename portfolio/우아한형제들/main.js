@@ -1,4 +1,5 @@
 "use strict";
+const currentPage = document.querySelector(".current__page");
 
 let circle = document.querySelector("circle");
 let radius = circle.r.baseVal.value;
@@ -84,6 +85,9 @@ new fullpage("#fullpage", {
       return (navbar.style.visibility = "visible");
     if (destination.anchor === "firstPage")
       return (navbar.style.visibility = "hidden");
+
+    if (destination.index === 1) return (currentPage.textContent = "");
+    // currentPage.textContent = "우선 인사!";
   },
   afterLoad: function (origin, destination, direction) {},
   afterRender: function () {},
