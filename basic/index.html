@@ -7,7 +7,12 @@
     <!-- meta 정보 제출하는 회사에 맞게 수정 -->
     <meta name="name" content="ThinkerRing" />
     <meta name="description" content="FE egineer ThinkerRing" />
-    <link rel="shortcut icon" href="imgs/TK_favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="imgs/TK-favicon.png" type="image/png" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -19,30 +24,115 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav id="navbar">
       <div class="navbar__logo">
-        <img
-          src="/imgs/TK_favicon.png"
-          alt="TK-logo"
-          class="navbar__logo__img"
-        />
+        <img src="/imgs/TK-logo.png" alt="TK-logo" />
         <!-- <a>태그 이용할지 말지 생각해 -->
-        <span>ThinkerRing</span>
+        <p>ThinkerRing</p>
       </div>
       <ul class="navbar__menu">
+        <!-- <li class="menu__item">Home</li> -->
         <li class="menu__item">Home</li>
-        <li class="menu__item">About</li>
         <li class="menu__item">Skills</li>
         <li class="menu__item">Project</li>
-        <li class="menu__item">Conact</li>
+        <li class="menu__item">Account</li>
       </ul>
     </nav>
-    <section id="home"></section>
-    <section id="about"></section>
-    <section id="skills"></section>
-    <section id="project"></section>
-    <section class="connect"></section>
+    
+    <section id="home">
+      <div class="home__avatar"></div>
+      <div class="home__descrition">
+        <h1>
+          안녕하세요<br />
+          ThinkerRing입니다.
+        </h1>
+        <h3>인터렉티브한 디자인에 관심이 많습니다.</h3>
+      </div>
+    </section>
+    <section id="skills">
+      <h1 class="skills__title">SKILLS</h1>
+      <!-- <div class="skills__major"> -->
+      <!-- <div class="skills__major-name">FE</div> -->
+      <div class="skills__major-items">
+        <div class="skills-item">
+          <span class="skills-item__name">HTML</span>
+          <div class="skills-item__bar">
+            <div class="skills-item__value" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__name">CSS</span>
+          <div class="skills-item__bar">
+            <div class="skills-item__value" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skills-item">
+          <span class="skills-item__name">JavsScript</span>
+          <div class="skills-item__bar">
+            <div class="skills-item__value" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </section>
+    <section id="project">
+      <h1 class="project__title">PROJECT</h1>
+      <div class="project__items">
+        <a href="#" target="blank" class="project__link">
+          <div class="project__img">
+            <div class="project__description">
+              <h3>타이틀</h3>
+              <span>설명</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- abount me가 더 맞는거 같음. 나중에 고쳐야 함. -->
+    <footer id="contact">
+      <div class="contact__title">
+        <h1>Read more&nbsp; </h1>
+        <h1>and&nbsp; </h1>
+        <h1>Let's talk </h1>
+      </div>
+      <div class="account">
+        <div class="account__icon">
+          <a
+          href="https://velog.io/@sibiwol12"
+          target="_blank"
+          class="account__link"
+          >
+            <span class="velog">v</span>
+          </a>
+          <a
+          href="https://github.com/sibiwol/TIL"
+          target="_blank"
+          class="account__link"
+          >
+            <i class="fab fa-github" ></i>
+          </a>
+        
+        <a
+          href="https://github.com/sibiwol/TIL"
+          target="_blank"
+          class="account__link"
+        >
+          <i class="far fa-envelope"></i>
+        </a>
+        <a 
+          href="https://twitter.com/ThinkerRing" 
+          target="_blank"
+          class="account__link"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+        </div>
+        <a href="mailto:thinkerring2020@gmail.com" class="account__gmail">thinkerring2020@gmail.com</a>
+      </div>
+    </footer>
   </body>
 </html>
