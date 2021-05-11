@@ -10,12 +10,13 @@
 :root {
   /* Color */
   --main-theme-color: salmon;
+  --main-theme-dark-color: rgb(233, 97, 82);
   --background-color-odd: white;
   --background-color-even: #fff7d1;
-  --title-font-color: black;
-  --subtitle-font-color: black;
-  --thirdtitle-font-color: black;
-  --text-font-color: black;
+  --title-text-color: black;
+  --subtitle-text-color: black;
+  --thirdtitle-text-color: black;
+  --text-color: black;
   --description-font-color: gray;
 
   --color-white: #ffffff;
@@ -31,6 +32,9 @@
   --color-orange: #fff7d1;
   --color-orange: #feb546;
 
+  /* font-family */
+  --main-font-family: BMJUA;
+
   /* Font size */
   --font-large: 48px;
   --font-medium: 28px;
@@ -44,11 +48,27 @@
   --weight-regular: 400;
 
   /* Size */
+  --size-border-radius: 4px;
 }
 
 /* Universal tags */
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font-family);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -57,27 +77,71 @@
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
-  color: var(--subject-font-color);
+  color: var(--title-text-color);
   margin: 16px 0;
 }
 
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
-  color: var(--subtitle-font-color);
+  color: var(--subtitle-text-color);
   margin: 8px 0;
 }
 
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--font-regular);
-  color: var(--thirdtitle-font-color);
+  color: var(--thirdtitle-text-color);
   margin: 8px 0;
 }
 
 p {
   font-size: var(--font-regular);
   font-weight: var(--font-regular);
-  color: var(--text-font-color);
+  color: var(--text-color);
   margin: 4px 0;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-theme-color);
+  padding: 16px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+.navbar__logo span {
+  margin-left: 12px;
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-white);
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__menu__item {
+  margin: 0 4px;
+  padding: 12px 14px;
+  font-size: var(--font-regular);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--main-theme-dark-color);
+  border-radius: var(--size-border-radius);
 }
