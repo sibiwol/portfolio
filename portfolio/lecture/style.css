@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global */
+:root {
+  /* Color */
+  --main-theme-color: salmon;
+  --background-color-odd: white;
+  --background-color-even: #fff7d1;
+  --subject-font-color: black;
+  --description-font-color: gray;
+
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe917d;
+  --color-dark-pink: #fe917d;
+  --color-black: #000000;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-dark-grey: #4d4d4d;
+  --color-blue: #73aace;
+  --color-orange: #fff7d1;
+  --color-orange: #feb546;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
