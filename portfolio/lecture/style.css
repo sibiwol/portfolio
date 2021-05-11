@@ -31,6 +31,7 @@
   --color-blue: #73aace;
   --color-orange: #fff7d1;
   --color-orange: #feb546;
+  --color-green: teal;
 
   /* font-family */
   --main-font-family: BMJUA;
@@ -102,6 +103,13 @@ p {
   margin: 4px 0;
 }
 
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
 /* Navbar */
 #navbar {
   display: flex;
@@ -144,4 +152,58 @@ p {
 .navbar__menu__item:hover {
   background-color: var(--main-theme-dark-color);
   border-radius: var(--size-border-radius);
+}
+
+/* Home */
+#home {
+  background: url("/imgs/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 40px;
+  text-align: center;
+}
+
+#home img {
+  margin: 24px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid var(--color-green);
+}
+
+.home__contact {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-light-white);
+  border-radius: var(--size-border-radius);
+
+  transform-origin: 50% 0%;
+  animation-name: shake;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 300ms;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, -3px);
+  }
+  20% {
+    transform: translate(0);
+  }
+  40% {
+    transform: translate(0, -6px);
+  }
+  60% {
+    transform: translate(0);
+  }
+  80% {
+    transform: translate(0, -3px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
