@@ -12,7 +12,10 @@
   --main-theme-color: salmon;
   --background-color-odd: white;
   --background-color-even: #fff7d1;
-  --subject-font-color: black;
+  --title-font-color: black;
+  --subtitle-font-color: black;
+  --thirdtitle-font-color: black;
+  --text-font-color: black;
   --description-font-color: gray;
 
   --color-white: #ffffff;
@@ -48,4 +51,33 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--subject-font-color);
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--subtitle-font-color);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--thirdtitle-font-color);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--text-font-color);
+  margin: 4px 0;
 }
