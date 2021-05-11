@@ -50,6 +50,9 @@
 
   /* Size */
   --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -184,7 +187,7 @@ button {
   animation-name: shake;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  animation-delay: 300ms;
+  animation-delay: var(--animation-duration);
 }
 
 @keyframes shake {
@@ -205,5 +208,95 @@ button {
   }
   100% {
     transform: translate(0);
+  }
+}
+
+/* Section common */
+.section {
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px;
+}
+
+/* About */
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major__icon {
+  margin: 16px;
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
+  color: var(--color-green);
+  border: 1px solid var(--color-green);
+  border-radius: 50%;
+}
+
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.major__icon:hover i {
+  color: var(--main-theme-color);
+
+  transform-origin: 50% 0%;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-delay: var(--animation-duration);
+}
+
+.major__title {
+  color: var(--color-dark-grey);
+  font-size: var(--font-medium);
+}
+
+.major__icon:hover .major__title {
+  color: var(--main-theme-color);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, -3px);
+  }
+  20% {
+    transform: translate(0);
+  }
+  40% {
+    transform: translate(0, -6px);
+  }
+  60% {
+    transform: translate(0);
+  }
+  80% {
+    transform: translate(0, -3px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0) scale(1.1);
+  }
+  20% {
+    transform: rotate(-30deg) scale(1.1);
+  }
+  40% {
+    transform: rotate(30deg) scale(1.1);
+  }
+  60% {
+    transform: rotate(-30deg) scale(1.1);
+  }
+  80% {
+    transform: rotate(30deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0) scale(1.1);
   }
 }
