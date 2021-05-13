@@ -29,7 +29,7 @@
   --color-light-grey: #7c7979;
   --color-dark-grey: #4d4d4d;
   --color-blue: #73aace;
-  --color-orange: #fff7d1;
+  --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-green: teal;
 
@@ -190,32 +190,15 @@ button {
   animation-delay: var(--animation-duration);
 }
 
-@keyframes shake {
-  0% {
-    transform: translate(0, -3px);
-  }
-  20% {
-    transform: translate(0);
-  }
-  40% {
-    transform: translate(0, -6px);
-  }
-  60% {
-    transform: translate(0);
-  }
-  80% {
-    transform: translate(0, -3px);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-
 /* Section common */
 .section {
   margin: auto;
   padding: 50px;
   text-align: center;
+}
+
+.section__container {
+  margin: auto;
   max-width: 1200px;
 }
 
@@ -247,7 +230,7 @@ button {
   transform-origin: 50% 0%;
   animation-name: rotate;
   animation-duration: 2s;
-  animation-delay: var(--animation-duration);
+  animation-delay: 100ms;
 }
 
 .major__title {
@@ -255,8 +238,58 @@ button {
   font-size: var(--font-medium);
 }
 
-.major__icon:hover .major__title {
+/* .major__icon:hover .major__title {
   color: var(--main-theme-color);
+} => javascript로 구현하기 */
+
+/* Skills */
+
+#skills {
+  background-color: var(--color-yellow);
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+}
+
+.skillset__title {
+  color: var(--color-light-white);
+}
+
+.skills__left {
+  flex-basis: 60%;
+  padding: 20px 40px;
+}
+
+.skill {
+  margin: 12px 0;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.skill__value {
+  /* width: 70%; */
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skills__right {
+  flex-basis: 40%;
+  padding: 20px 40px;
+  background-color: var(--color-dark-grey);
 }
 
 @keyframes shake {
