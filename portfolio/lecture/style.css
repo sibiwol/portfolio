@@ -432,6 +432,42 @@ button {
   color: var(--main-theme-color);
 }
 
+/* Contact */
+#contact {
+  background-color: var(--main-theme-color);
+}
+
+.contact__title,
+.contact__email,
+.contact__links i,
+.contact__links span,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact__links i {
+  transition: all var(--animation-duration) ease-in;
+}
+
+.contact__links i:hover,
+.contact__links span:hover {
+  transform: scale(1.1);
+  color: var(--color-dark-grey);
+}
+
+.contact__links a span {
+  font-size: 58px;
+}
+
 @keyframes shake {
   0% {
     transform: translate(0, -3px);
