@@ -128,8 +128,8 @@ button {
 }
 
 .logo-img {
-  width: 72px;
-  height: 72px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
 }
 
@@ -157,18 +157,33 @@ button {
   border-radius: var(--size-border-radius);
 }
 
+.navbar__toggle-btn {
+  display: none;
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  font-size: var(--font-medium);
+  color: var(--color-white);
+}
+
 /* Home */
 #home {
-  background: url("/imgs/bg.png");
+  background: rgb(254, 145, 125);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 128, 55, 0.4) 20%,
+    rgba(254, 145, 125, 0.4) 70%
+  );
+  /* background: url("/imgs/bg.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100%; */
   padding: 40px;
   text-align: center;
 }
 
 #home img {
-  margin: 24px;
+  /* margin: 24px; */
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -234,6 +249,7 @@ button {
 }
 
 .major__title {
+  margin-top: 12px;
   color: var(--color-dark-grey);
   font-size: var(--font-medium);
 }
@@ -250,6 +266,7 @@ button {
 }
 
 .skillset {
+  margin-top: 12px;
   display: flex;
   background-color: var(--color-light-grey);
   color: var(--color-light-white);
@@ -466,6 +483,51 @@ button {
 
 .contact__links a span {
   font-size: 58px;
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .major {
+    margin-bottom: 38px;
+  }
+
+  .major__icon {
+    margin: auto;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
+
+  .testimonial__avatar {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 @keyframes shake {
