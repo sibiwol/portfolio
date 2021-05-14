@@ -61,6 +61,7 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: var(--main-font-family);
@@ -118,7 +119,10 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--main-theme-color);
+  position: fixed;
+  width: 100%;
+  /* background-color: var(--main-theme-color); */
+  background-color: transparent;
   padding: 16px;
 }
 
@@ -178,7 +182,7 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%; */
-  padding: 40px;
+  padding: 100px 40px 40px 40px;
   text-align: center;
 }
 
