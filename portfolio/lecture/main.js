@@ -4,12 +4,13 @@ const navbar = document.querySelector("#navbar");
 const home = document.querySelector("#home");
 const about = document.querySelector("#about");
 
+// navbar가 top에 올라가면 background-color = transparent
 window.addEventListener("scroll", () => {
-  let navbarHeight = navbar.getBoundingClientRect().height;
+  const navbarHeight = navbar.getBoundingClientRect().height;
 
   if (navbarHeight < scrollY) {
-    navbar.style.backgroundColor = "#fe907d";
+    navbar.classList.add("color--dark");
   } else {
-    navbar.style.backgroundColor = "transparent";
+    navbar.classList.remove("color--dark");
   }
 });

@@ -22,7 +22,7 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-pink: #fe917d;
+  --color-pink: #fe907d;
   --color-dark-pink: #fe917d;
   --color-black: #000000;
   --color-grey: #616161;
@@ -124,6 +124,11 @@ button {
   /* background-color: var(--main-theme-color); */
   background-color: transparent;
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.color--dark {
+  background-color: #fe907d;
 }
 
 .navbar__logo {
@@ -176,7 +181,7 @@ button {
   background: linear-gradient(
     0deg,
     rgba(0, 128, 55, 0.4) 20%,
-    rgba(254, 145, 125, 0.4) 70%
+    rgba(254, 145, 125, 0.8) 70%
   );
   /* background: url("/imgs/bg.png");
   background-position: center;
