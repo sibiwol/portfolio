@@ -125,6 +125,7 @@ button {
   background-color: transparent;
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.color--dark {
@@ -217,7 +218,7 @@ button {
 /* Section common */
 .section {
   margin: auto;
-  padding: 50px;
+  padding: 85px 50px 50px 50px;
   text-align: center;
 }
 
