@@ -9,9 +9,8 @@ const testimonials = document.querySelector("#testimonials");
 const contact = document.querySelector("#contact");
 
 // navbar가 top에 올라가면 background-color = transparent
+const navbarHeight = navbar.getBoundingClientRect().height;
 window.addEventListener("scroll", () => {
-  const navbarHeight = navbar.getBoundingClientRect().height;
-
   if (navbarHeight < scrollY) {
     navbar.classList.add("color--dark");
   } else {
@@ -34,11 +33,25 @@ contactBtn.addEventListener("click", () => {
 });
 
 // Make home slowly fad to transparent as the window scrolls down
+const homeHeight = home.getBoundingClientRect().height;
 window.addEventListener("scroll", () => {
   const homeContainer = document.querySelector(".home__container");
-  const homeHeight = home.getBoundingClientRect().height;
 
   homeContainer.style.opacity = 1 - scrollY / homeHeight;
+});
+
+// Show "arrow up" buttonw when scrolling down
+const arrowUp = document.querySelector(".arrow-up");
+window.addEventListener("scroll", () => {
+  if (scrollY + navbarHeight > homeHeight) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#home");
 });
 
 function scrollIntoView(selector) {

@@ -495,6 +495,27 @@ button {
   font-size: 58px;
 }
 
+.arrow-up {
+  width: 56px;
+  height: 56px;
+  font-size: var(--font-medium);
+  color: var(--color-white);
+  background-color: var(--main-theme-color);
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 36px;
+  right: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--animation-duration) ease-in;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
