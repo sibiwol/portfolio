@@ -26,6 +26,12 @@ navbarMenu.addEventListener("click", (e) => {
   scrollIntoView(dataLink);
 });
 
+// Navbar toogle button for small screen
+const toogleBtn = document.querySelector(".navbar__toggle-btn");
+toogleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
+});
+
 //  handle click on "contact me" button on home
 const contactBtn = document.querySelector(".home__contact");
 contactBtn.addEventListener("click", () => {
@@ -38,6 +44,8 @@ window.addEventListener("scroll", () => {
   const homeContainer = document.querySelector(".home__container");
 
   homeContainer.style.opacity = 1 - scrollY / homeHeight;
+
+  navbarMenu.classList.remove("open");
 });
 
 // Show "arrow up" buttonw when scrolling down
