@@ -71,6 +71,14 @@ const projects = document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
 
+  // Remove selection from the previous item and select the news
+  const active = document.querySelector(".category__btn.selected");
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+
+  active.classList.remove("selected");
+  target.classList.add("selected");
+
   projectsContiner.classList.add("animation-out");
   setTimeout(() => {
     projects.forEach((project) => {
