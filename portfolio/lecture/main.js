@@ -160,11 +160,9 @@ window.addEventListener("wheel", () => {
     selectedNavIndex = 0;
   } else if (
     Math.round(window.scrollY + window.innerHeight) >=
-    document.body.clientHeight
+    document.body.scrollHeight
   ) {
     selectedNavIndex = navItems.length - 1;
-    console.log(selectedNavIndex);
-    console.log("contact");
   }
   selectNavItem(navItems[selectedNavIndex]);
 });
