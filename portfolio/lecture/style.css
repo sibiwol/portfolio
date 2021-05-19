@@ -156,12 +156,15 @@ button {
 
 .navbar__menu__item {
   margin: 0 4px;
-  padding: 12px 14px;
+  padding: 8px 14px;
   font-size: var(--font-regular);
   color: var(--color-white);
   cursor: pointer;
 }
 
+.navbar__menu__item.active {
+  border: 2px solid var(--color-white);
+}
 .navbar__menu__item:hover {
   background-color: var(--main-theme-dark-color);
   border-radius: var(--size-border-radius);

@@ -23,7 +23,12 @@ const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (e) => {
   const target = e.target;
   const dataLink = target.dataset.link;
+  // if (dataLink == null) {
+  //   return;
+  // }
+  navbarMenu.classList.remove("open");
   scrollIntoView(dataLink);
+  selectNavItem(target);
 });
 
 // Navbar toogle button for small screen
@@ -95,7 +100,71 @@ workBtnContainer.addEventListener("click", (e) => {
   }, 300);
 });
 
+// 1. 모든 섹션 요소들과 메뉴 아이템을 가지고 온다.
+// 2. IntersectionObserver를 이용해서 머든 섹션들을 관찰한다.
+// 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
+
+const sectionIds = [
+  "#home",
+  "#about",
+  "#skills",
+  "#work",
+  "#testimonials",
+  "#contact",
+];
+const sections = sectionIds.map((id) => document.querySelector(id));
+const navItems = sectionIds.map((id) =>
+  document.querySelector(`[data-link="${id}"]`)
+);
+
+let selectedNavIndex;
+let selectedNavItem = navItems[0];
+
+function selectNavItem(selected) {
+  selectedNavItem.classList.remove("active");
+  selectedNavItem = selected;
+  selectedNavItem.classList.add("active");
+}
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
+
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.4,
+};
+const observerCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const index = sectionIds.indexOf(`#${entry.target.id}`);
+
+      // 스크롤링이 아래로 되어 페이지가 올라옴
+      if (entry.boundingClientRect.y < 0) {
+        selectedNavIndex = index + 1;
+      } else {
+        selectedNavIndex = index - 1;
+      }
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach((section) => observer.observe(section));
+
+window.addEventListener("wheel", () => {
+  if (window.scrollY === 0) {
+    selectedNavIndex = 0;
+  } else if (
+    Math.round(window.scrollY + window.innerHeight) >=
+    document.body.clientHeight
+  ) {
+    selectedNavIndex = navItems.length - 1;
+    console.log(selectedNavIndex);
+    console.log("contact");
+  }
+  selectNavItem(navItems[selectedNavIndex]);
+});
